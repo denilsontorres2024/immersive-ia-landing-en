@@ -89,7 +89,7 @@ const DeliveriesSection = () => {
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
           <ResponsiveText className="text-muted-foreground max-w-3xl mx-auto" size="lg">
-            50 capacitações presenciais organizadas em 3 trilhas especializadas
+            50 capacitações presenciais organizadas em 3 trilhas especializadas.
           </ResponsiveText>
         </div>
 
