@@ -1,0 +1,29 @@
+{
+  "name": "sebraeproposta",
+  "type": "app",
+  "build": {
+    "type": "dockerfile",
+    "dockerfile": "Dockerfile"
+  },
+  "deploy": {
+    "port": 80,
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "80"
+    },
+    "healthCheck": {
+      "path": "/health",
+      "port": 80,
+      "interval": 30,
+      "timeout": 10,
+      "retries": 3
+    }
+  },
+  "domains": [
+    {
+      "host": "sebraeproposta.denitorres.com",
+      "port": 80,
+      "https": true
+    }
+  ]
+}

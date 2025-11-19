@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deni Torres - AI Creator | Agentes que Geram Receita</title>
+    <meta name="description" content="Desenvolvo agentes de IA que geram receita real. Lives diárias às 19h sobre automação e Growth. Creator da Academia Lendár[IA]™" />
+    <meta name="author" content="Deni Torres" />
+    <meta name="keywords" content="IA, Inteligência Artificial, Automação, Agentes IA, Growth, Receita, Academy, Lives" />
+
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --background: 0 0% 4%;
+            --foreground: 0 0% 98%;
+            --card: 0 0% 8%;
+            --card-foreground: 0 0% 95%;
+            --popover: 0 0% 8%;
+            --popover-foreground: 0 0% 95%;
+            --primary: 15 75% 55%;
+            --primary-foreground: 0 0% 98%;
+            --secondary: 0 0% 12%;
+            --secondary-foreground: 0 0% 90%;
+            --muted: 0 0% 20%;
+            --muted-foreground: 0 0% 65%;
+            --accent: 0 0% 15%;
+            --accent-foreground: 0 0% 95%;
+            --destructive: 0 65% 50%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 0 0% 18%;
+            --input: 0 0% 12%;
+            --ring: 15 75% 55%;
+            --success: 140 50% 45%;
+            --warning: 40 80% 50%;
+            --error: 0 65% 50%;
+            --info: 210 50% 55%;
+            --gradient-primary: linear-gradient(135deg, hsl(15 75% 55%), hsl(10 70% 50%));
+            --gradient-subtle: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
+            --gradient-hero: linear-gradient(45deg, hsla(15 75% 55% / .03), hsla(10 70% 50% / .05));
+            --gradient-card: linear-gradient(135deg, hsl(0 0% 8% / .8), hsl(0 0% 12% / .9));
+            --shadow-subtle: 0 2px 8px hsla(0 0% 0% / .15);
+            --shadow-medium: 0 4px 16px hsla(0 0% 0% / .25);
+            --shadow-strong: 0 8px 32px hsla(0 0% 0% / .35);
+            --shadow-accent: 0 4px 24px hsla(15 75% 55% / .08);
+            --transition-fast: .15s cubic-bezier(.4, 0, .2, 1);
+            --transition-normal: .25s cubic-bezier(.4, 0, .2, 1);
+            --transition-slow: .4s cubic-bezier(.4, 0, .2, 1);
+            --space-xs: .5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            --radius: .5rem;
+            --font-h1-desktop: 3rem;
+            --font-h1-mobile: 2rem;
+            --font-h2-desktop: 2.25rem;
+            --font-h2-mobile: 1.5rem;
+            --font-h3-desktop: 1.5rem;
+            --font-h3-mobile: 1.25rem;
+            --font-body-desktop: 1rem;
+            --font-body-mobile: .9rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-color: hsl(var(--border));
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            font-display: swap;
+        }
+
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            max-width: 1400px;
+        }
+
+        .btn-primary {
+            min-height: 48px;
+            border-radius: .25rem;
+            background-color: hsl(var(--primary));
+            padding: .75rem 1.5rem;
+            font-weight: 600;
+            color: hsl(var(--primary-foreground));
+            transition: all .3s cubic-bezier(0,0,.2,1);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-accent);
+        }
+
+        .btn-secondary {
+            min-height: 48px;
+            border-radius: .25rem;
+            border: 1px solid hsl(var(--border));
+            background-color: hsl(var(--card));
+            padding: .75rem 1.5rem;
+            font-weight: 600;
+            color: hsl(var(--card-foreground));
+            transition: all .3s cubic-bezier(0,0,.2,1);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            border-color: hsl(var(--muted));
+            background-color: hsl(var(--accent));
+        }
+
+        .btn-cta {
+            min-height: 56px;
+            border-radius: var(--radius);
+            background-color: hsl(var(--primary));
+            padding: 1rem 2rem;
+            font-weight: 700;
+            color: hsl(var(--primary-foreground));
+            transition: all .3s cubic-bezier(0,0,.2,1);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .card-responsive {
+            border-radius: var(--radius);
+            border: 1px solid hsl(var(--border));
+            background-color: hsl(var(--card));
+            padding: 1.5rem;
+            color: hsl(var(--card-foreground));
+            transition: all .3s cubic-bezier(0,0,.2,1);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .card-responsive:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+            border-color: hsl(var(--muted));
+        }
+
+        h1 {
+            font-size: var(--font-h1-mobile);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -.025em;
+            color: hsl(var(--foreground));
+        }
+
+        h2 {
+            font-size: var(--font-h2-mobile);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            color: hsl(var(--foreground));
+        }
+
+        h3 {
+            font-size: var(--font-h3-mobile);
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -.01em;
+            color: hsl(var(--foreground));
+        }
+
+        @media (min-width: 1024px) {
+            h1 { font-size: var(--font-h1-desktop); }
+            h2 { font-size: var(--font-h2-desktop); }
+            h3 { font-size: var(--font-h3-desktop); }
+            body { font-size: var(--font-body-desktop); }
+        }
+
+        .text-primary { color: hsl(var(--primary)); }
+        .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+        .bg-primary { background-color: hsl(var(--primary)); }
+        .bg-card { background-color: hsl(var(--card)); }
+        .bg-background { background-color: hsl(var(--background)); }
+        .border-primary { border-color: hsl(var(--primary)); }
+
+        .min-h-screen { min-height: 100vh; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .text-center { text-align: center; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .w-4 { width: 1rem; }
+        .h-4 { height: 1rem; }
+        .w-8 { width: 2rem; }
+        .h-8 { height: 2rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .p-3 { padding: 0.75rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .rounded { border-radius: 0.25rem; }
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-black { font-weight: 900; }
+        .leading-relaxed { line-height: 1.625; }
+        .leading-tight { line-height: 1.25; }
+        .opacity-0 { opacity: 0; }
+        .opacity-100 { opacity: 1; }
+        .translate-y-0 { transform: translateY(0); }
+        .translate-y-8 { transform: translateY(2rem); }
+        .translate-y-10 { transform: translateY(2.5rem); }
+        .transition-all { transition-property: all; }
+        .duration-800 { transition-duration: 800ms; }
+        .duration-1000 { transition-duration: 1000ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-600 { transition-delay: 600ms; }
+        .overflow-hidden { overflow: hidden; }
+        .bg-cover { background-size: cover; }
+        .bg-center { background-position: center; }
+        .bg-no-repeat { background-repeat: no-repeat; }
+        .hidden { display: none; }
+        .block { display: block; }
+        .w-16 { width: 4rem; }
+        .w-24 { width: 6rem; }
+        .h-0\.5 { height: 0.125rem; }
+        .max-w-md { max-width: 28rem; }
+        .hover\:scale-105:hover { transform: scale(1.05); }
+        .transition-transform { transition-property: transform; }
+        .duration-300 { transition-duration: 300ms; }
+
+        @media (min-width: 640px) {
+            .sm\:flex-row { flex-direction: row; }
+            .sm\:gap-6 { gap: 1.5rem; }
+            .sm\:mb-12 { margin-bottom: 3rem; }
+            .sm\:block { display: block; }
+            .sm\:text-5xl { font-size: 3rem; }
+            .sm\:mb-6 { margin-bottom: 1.5rem; }
+            .sm\:text-3xl { font-size: 1.875rem; }
+            .sm\:text-xl { font-size: 1.25rem; }
+            .sm\:w-24 { width: 6rem; }
+            .sm\:mb-8 { margin-bottom: 2rem; }
+            .sm\:text-2xl { font-size: 1.5rem; }
+            .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .sm\:text-lg { font-size: 1.125rem; }
+            .sm\:hidden { display: none; }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .lg\:gap-12 { gap: 3rem; }
+            .lg\:text-left { text-align: left; }
+            .lg\:text-6xl { font-size: 3.75rem; }
+            .lg\:text-4xl { font-size: 2.25rem; }
+            .lg\:text-2xl { font-size: 1.5rem; }
+            .lg\:mx-0 { margin-left: 0; margin-right: 0; }
+            .lg\:max-w-none { max-width: none; }
+            .lg\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        }
+
+        @media (min-width: 1280px) {
+            .xl\:text-7xl { font-size: 4.5rem; }
+            .xl\:text-5xl { font-size: 3rem; }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-bounce {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                transform: translate3d(0, 0, 0);
+            }
+            40%, 43% {
+                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                transform: translate3d(0, -30px, 0);
+            }
+            70% {
+                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                transform: translate3d(0, -15px, 0);
+            }
+            90% {
+                transform: translate3d(0, -4px, 0);
+            }
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .loading-screen {
+            position: fixed;
+            inset: 0;
+            background-color: hsl(var(--background));
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .spinner {
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid hsl(var(--primary) / 0.2);
+            border-top: 4px solid hsl(var(--primary));
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+
+        .scroll-button {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: none;
+            border: none;
+            color: hsl(var(--foreground));
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .scroll-button:hover {
+            color: hsl(var(--primary));
+        }
+
+        .bg-gradient {
+            background: linear-gradient(135deg, hsl(var(--background)/0.95) 0%, hsl(var(--background)/0.8) 50%, hsl(var(--background)/0.6) 100%);
+        }
+
+        .bg-gradient-overlay {
+            background: linear-gradient(to top, hsl(var(--background)) 0%, transparent 50%, hsl(var(--background)/0.4) 100%);
+        }
+
+        .parallax-bg {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:0.05" /></linearGradient></defs><rect width="100%" height="100%" fill="url(%23bg)" /></svg>');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="text-center">
+            <div class="spinner"></div>
+            <p class="text-primary text-xl font-bold animate-pulse">Carregando experiência...</p>
+            
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="min-h-screen bg-background text-foreground overflow-hidden">
+        <!-- Proposal Cover Section -->
+        <section id="cover" class="relative min-h-screen flex flex-col items-center justify-center bg-background text-foreground overflow-hidden">
+            <!-- Background -->
+            <div class="absolute inset-0 parallax-bg">
+                <div class="absolute inset-0 bg-gradient"></div>
+                <div class="absolute inset-0 bg-gradient-overlay"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-4 container mx-auto flex-1 flex flex-col justify-center">
+                <!-- Header Info -->
+                <div class="animate-fade-in">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 sm:mb-12 text-muted-foreground text-sm">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Sebrae Nacional</span>
+                        </div>
+                        <div class="w-1 h-1 bg-primary rounded-full hidden sm:block"></div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Novembro 2025</span>
+                        </div>
+                        <div class="w-1 h-1 bg-primary rounded-full hidden sm:block"></div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Brasília - DF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
+                    <!-- Text Content -->
+                    <div class="lg:text-left">
+                        <div class="transition-all duration-800 delay-200 animate-fade-in">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 text-foreground leading-tight">
+                                PROPOSTA
+                                <br class="hidden sm:block">
+                                <span class="text-primary">COMERCIAL</span>
+                            </h1>
+                            
+                            <div class="mb-6 sm:mb-8">
+                                <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-2">
+                                    ÓRBITA 2025
+                                </h2>
+                                <h3 class="text-lg sm:text-xl lg:text-2xl font-medium text-primary">
+                                    Inteligência Artificial na Prática
+                                </h3>
+                            </div>
+
+                            <div class="w-16 sm:w-24 h-0.5 bg-primary mx-auto lg:mx-0 mb-6 sm:mb-8"></div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="transition-all duration-800 delay-400 animate-fade-in">
+                            <div class="flex flex-col sm:flex-row gap-4 mb-6 sm:mb-8">
+                                <button onclick="scrollToNext()" class="btn-cta hover:scale-105">
+                                    Ver Proposta
+                                </button>
+                                <button onclick="scrollToProfile()" class="btn-secondary hover:scale-105">
+                                    Quem é Deni Torres
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Info Card -->
+                    <div class="transition-all duration-800 delay-600 animate-fade-in">
+                        <div class="card-responsive max-w-md mx-auto lg:max-w-none hover:scale-105 transition-transform duration-300">
+                            <!-- Social Proof -->
+                            <div class="flex items-center justify-center gap-4 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-primary icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                                    </svg>
+                                    <span class="text-xl font-bold text-primary" id="student-count">+12k</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-primary icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-sm font-medium">AI Creator</span>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <h4 class="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                                    DENI TORRES
+                                </h4>
+                                <p class="text-muted-foreground text-sm mb-4">
+                                    AI Creator • Automação • Micro-SaaS
+                                </p>
+                                
+                                <!-- Trust Indicators -->
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                    <div class="bg-primary/10 border border-primary/30 px-3 py-2 rounded">
+                                        <span class="text-primary text-xs font-medium">
+                                            +12K Alunos • +6 anos em startups
+                                        </span>
+                                    </div>
+                                    <div class="bg-primary/10 border border-primary/30 px-3 py-2 rounded">
+                                        <span class="text-primary text-xs font-medium">
+                                            Academia Lendár[IA]
+                                        </span>
+                                    </div>
+                                    <div class="bg-primary/10 border border-primary/30 px-3 py-2 rounded">
+                                        <span class="text-primary text-xs font-medium">
+                                            Formado em Tecnologia
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Button -->
+            <button onclick="scrollToNext()" class="scroll-button sm:hidden">
+                <svg class="w-5 h-5 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </section>
+
+        <!-- Opening Message Section -->
+        <section id="opening" class="py-12 lg:py-16 bg-card/20 relative">
+            <div class="container mx-auto">
+                <div class="max-w-3xl mx-auto text-center transition-all duration-1000 animate-fade-in">
+                    <div class="mb-6 flex justify-center">
+                        <div class="bg-primary/10 p-3 rounded-xl">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-responsive bg-card/80 border-primary/20">
+                        <blockquote class="text-base sm:text-lg text-foreground leading-relaxed">
+                            "Esta proposta foi elaborada com apoio de <span class="text-primary font-semibold">Inteligência Artificial</span>, demonstrando na prática o potencial da tecnologia. Esse mesmo processo será <span class="text-primary font-semibold">ensinado de forma aplicada</span> durante o workshop."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Button -->
+            <button onclick="scrollToDeliveries()" class="scroll-button sm:hidden">
+                <svg class="w-5 h-5 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 lg:py-16 bg-gradient-to-br from-primary/5 to-primary/10">
+            <div class="container mx-auto text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-foreground">
+                        Entre em Contato
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <a href="https://wa.me/5511999999999" class="card-responsive hover:scale-105 transition-transform duration-300 text-center">
+                            <div class="bg-green-500/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold mb-2">WhatsApp</h3>
+                            <p class="text-muted-foreground text-sm">Falar com Deni no WhatsApp</p>
+                        </a>
+                        
+                        <a href="mailto:contato@denitorres.com" class="card-responsive hover:scale-105 transition-transform duration-300 text-center">
+                            <div class="bg-blue-500/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold mb-2">E-mail</h3>
+                            <p class="text-muted-foreground text-sm">contato@denitorres.com</p>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/deni-torres-2002" class="card-responsive hover:scale-105 transition-transform duration-300 text-center">
+                            <div class="bg-blue-600/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold mb-2">LinkedIn</h3>
+                            <p class="text-muted-foreground text-sm">Conecte-se no LinkedIn</p>
+                        </a>
+                    </div>
+                    
+                    <div class="card-responsive bg-primary/5 border-primary/20 max-w-2xl mx-auto">
+                        <h3 class="text-xl font-bold mb-4 text-foreground">DENI TORRES</h3>
+                        <p class="text-muted-foreground mb-4">AI Creator | Especialista em Automação e Growth</p>
+                        <p class="text-sm text-muted-foreground opacity-80">
+                            Esta proposta foi elaborada com apoio de Inteligência Artificial, demonstrando na prática o potencial da tecnologia. Esse mesmo processo será ensinado de forma aplicada durante o workshop.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Remove loading screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingScreen.remove();
+                    }, 500);
+                }
+            }, 1000);
+        });
+
+        // Animate student count
+        function animateCounter() {
+            const target = 12000;
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            const element = document.getElementById('student-count');
+            
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = '+' + Math.floor(current/1000) + 'k';
+                    requestAnimationFrame(updateCount);
+                } else {
+                    element.textContent = '+12k';
+                }
+            };
+            
+            setTimeout(updateCount, 1000);
+        }
+
+        // Scroll functions
+        function scrollToNext() {
+            const nextSection = document.getElementById('opening');
+            if (nextSection) {
+                const offset = 80;
+                const elementPosition = nextSection.offsetTop - offset;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function scrollToProfile() {
+            const profileElements = document.querySelectorAll('h4');
+            let profileSection = null;
+            
+            profileElements.forEach(element => {
+                if (element.textContent?.includes('DENI TORRES')) {
+                    profileSection = element.closest('section');
+                }
+            });
+            
+            if (profileSection) {
+                const offset = 80;
+                const elementPosition = profileSection.offsetTop - offset;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function scrollToDeliveries() {
+            const nextSection = document.querySelector('#contact');
+            if (nextSection) {
+                const offset = 80;
+                const elementPosition = nextSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Initialize animations
+        setTimeout(() => {
+            animateCounter();
+        }, 1500);
+
+        // Add structured data for SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Proposta OPEN AI - Inteligência Artificial na Prática",
+            "description": "Evento especializado em IA para micro e pequenos empresários",
+            "startDate": "2025-11-01",
+            "location": {
+                "@type": "Place",
+                "name": "Brasília - DF",
+                "address": "Brasília, Distrito Federal, Brasil"
+            },
+            "organizer": {
+                "@type": "Person",
+                "name": "Deni Torres",
+                "jobTitle": "AI Creator, Automação e Micro-SaaS"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "25000",
+                "priceCurrency": "BRL"
+            }
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

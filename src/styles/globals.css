@@ -1,0 +1,325 @@
+
+/* Enhanced Global Styles for Better Responsive Design */
+
+/* Custom Properties for Advanced Design System */
+:root {
+  /* Enhanced Spacing Scale */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-4xl: 6rem;     /* 96px */
+  --space-5xl: 8rem;     /* 128px */
+
+  /* Enhanced Typography Scale */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 3.75rem;   /* 60px */
+  --text-7xl: 4.5rem;    /* 72px */
+
+  /* Advanced Shadow System */
+  --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-strong: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-epic: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(var(--primary), 0.3);
+  --shadow-accent: 0 0 30px rgba(var(--primary), 0.2);
+
+  /* Advanced Border Radius */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+
+  /* Enhanced Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 100%);
+  --gradient-subtle: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.1) 100%);
+  --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.5) 100%);
+  --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--card) / 0.8) 100%);
+}
+
+/* Enhanced Base Styles */
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Responsive Container System */
+.container-responsive {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: min(1400px, calc(100vw - 2rem));
+}
+
+/* Advanced Card System */
+.card-responsive {
+  @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-4 sm:p-6 lg:p-8;
+  @apply hover:border-primary/20 hover:bg-card/90 transition-all duration-300;
+  box-shadow: var(--shadow-soft);
+}
+
+.card-responsive:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.card-interactive {
+  @apply card-responsive cursor-pointer;
+  @apply hover:scale-[1.02] active:scale-[0.98];
+  @apply transition-all duration-200;
+}
+
+.card-interactive:hover {
+  box-shadow: var(--shadow-strong);
+}
+
+.card-glow {
+  @apply card-responsive;
+  @apply border-primary/30 bg-gradient-to-br from-card to-primary/5;
+  box-shadow: var(--shadow-glow);
+}
+
+.card-glow:hover {
+  box-shadow: var(--shadow-accent);
+}
+
+/* Enhanced Button System */
+.btn-base {
+  @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  @apply disabled:pointer-events-none disabled:opacity-50;
+  @apply text-sm sm:text-base;
+  @apply px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4;
+}
+
+.btn-primary {
+  @apply btn-base bg-primary text-primary-foreground;
+  @apply hover:bg-primary/90 hover:scale-105 active:scale-95;
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-strong);
+}
+
+.btn-secondary {
+  @apply btn-base bg-secondary text-secondary-foreground border border-border;
+  @apply hover:bg-secondary/80 hover:border-primary/30;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-cta {
+  @apply btn-base bg-gradient-to-r from-primary to-primary/80 text-primary-foreground;
+  @apply hover:from-primary/90 hover:to-primary/70 hover:scale-105 active:scale-95;
+  @apply font-semibold tracking-wide;
+  box-shadow: var(--shadow-strong);
+}
+
+.btn-cta:hover {
+  box-shadow: var(--shadow-epic), var(--shadow-glow);
+}
+
+.btn-glow {
+  @apply btn-primary;
+  @apply border border-primary/50 hover:border-primary/70;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-glow:hover {
+  box-shadow: var(--shadow-accent);
+}
+
+/* Enhanced Typography System */
+.text-responsive {
+  @apply text-sm sm:text-base lg:text-lg;
+}
+
+.text-responsive-lg {
+  @apply text-base sm:text-lg lg:text-xl xl:text-2xl;
+}
+
+.text-responsive-xl {
+  @apply text-lg sm:text-xl lg:text-2xl xl:text-3xl;
+}
+
+.heading-responsive {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold;
+}
+
+.heading-responsive-lg {
+  @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+}
+
+/* Enhanced Spacing System */
+.section-padding {
+  @apply py-12 sm:py-16 lg:py-20 xl:py-24;
+}
+
+.section-padding-sm {
+  @apply py-8 sm:py-12 lg:py-16;
+}
+
+.content-spacing {
+  @apply space-y-4 sm:space-y-6 lg:space-y-8;
+}
+
+/* Enhanced Grid System */
+.grid-responsive {
+  @apply grid gap-4 sm:gap-6 lg:gap-8;
+}
+
+.grid-auto-fit {
+  @apply grid-responsive;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fill {
+  @apply grid-responsive;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* Animation Enhancements */
+.animate-fade-in-up {
+  @apply animate-[fadeInUp_0.6s_ease-out_forwards];
+}
+
+.animate-scale-in {
+  @apply animate-[scaleIn_0.4s_ease-out_forwards];
+}
+
+.animate-glow-pulse {
+  @apply animate-[glowPulse_2s_ease-in-out_infinite];
+}
+
+/* Touch Targets for Mobile */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+}
+
+/* Focus States */
+.focus-visible\:focus {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+}
+
+/* Responsive Images */
+.img-responsive {
+  @apply w-full h-auto object-cover;
+}
+
+/* Enhanced Scrollbar */
+.scrollbar-styled {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.3) transparent;
+}
+
+.scrollbar-styled::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-styled::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-styled::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 3px;
+}
+
+.scrollbar-styled::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+/* Enhanced Backdrop Effects */
+.backdrop-enhanced {
+  @apply backdrop-blur-md backdrop-saturate-150 backdrop-brightness-110;
+}
+
+/* Keyframes for Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px hsl(var(--primary) / 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 30px hsl(var(--primary) / 0.4);
+  }
+}
+
+/* Responsive Breakpoint Utilities */
+@media (max-width: 640px) {
+  .mobile-stack {
+    @apply flex-col space-y-4 space-x-0;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-stack {
+    @apply flex-row space-y-0 space-x-4;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
