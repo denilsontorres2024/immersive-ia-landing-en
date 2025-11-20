@@ -42,7 +42,7 @@ const OpeningMessage = () => {
     <section 
       id="opening" 
       ref={sectionRef} 
-      className="section-padding-sm bg-card/20 relative"
+      className="section-padding-sm bg-card/20 relative pb-16 sm:pb-8"
       aria-labelledby="opening-title"
     >
       <ResponsiveContainer size="md">
@@ -54,7 +54,7 @@ const OpeningMessage = () => {
             </div>
           </div>
 
-          <ResponsiveCard variant="elevated" className="bg-card/90 border-primary/20 backdrop-enhanced">
+          <ResponsiveCard variant="elevated" className="bg-card/90 border-primary/20 backdrop-enhanced mb-12 sm:mb-0">
             <blockquote>
               <ResponsiveText size="lg" className="text-foreground leading-relaxed">
                 "Capacitar parlamentares e equipes de órgãos públicos brasileiros no{" "}
