@@ -35,62 +35,62 @@ const GallerySection = () => {
   const galleryItems = [
     {
       id: 1,
-      title: "Competição Nacional",
-      description: "1º Lugar em Tecnologia",
+      title: "National Competition",
+      description: "1st Place in Technology",
       category: "competition",
       image: deniTrophy,
-      details: "Conquista histórica de Denilson Torres do primeiro lugar em competição nacional de tecnologia, demonstrando sua capacidade de desenvolver soluções inovadoras que se destacam no cenário brasileiro de inovação."
+      details: "Historic achievement by Denilson Torres winning first place in a national technology competition, demonstrating the ability to develop innovative solutions that stand out in Brazil's innovation landscape."
     },
     {
       id: 2,
-      title: "Formatura FIAP",
-      description: "Bolsista Integral",
+      title: "FIAP Graduation",
+      description: "Full Scholarship",
       category: "education",
       image: graduationFiap,
-      details: "Formação acadêmica sólida de Denilson Torres como bolsista integral na FIAP, onde construiu as bases técnicas que hoje aplicam na criação de agentes de IA que geram receita real para empresários brasileiros."
+      details: "Solid academic background of Denilson Torres as a full scholarship student at FIAP, where he built the technical foundations now applied to create AI agents that generate real revenue for Brazilian entrepreneurs."
     },
     {
       id: 3,
-      title: "Academia Lendár[IA]™",
-      description: "Palestra sobre IA para Receita",
+      title: "Lendár[IA]™ Academy",
+      description: "Talk on Revenue with AI",
       category: "speaking",
       image: academiaEvent,
-      details: "Apresentação marcante de Denilson Torres na Academia Lendária sobre estratégias práticas de como gerar receita com IA, compartilhando métodos comprovados que já transformaram +12k alunos • +6 anos em startups através do ensino."
+      details: "Notable presentation by Denilson Torres at Lendár[IA] Academy on practical strategies for generating revenue with AI, sharing proven methods that have transformed 12k+ students • 6+ years in startups through teaching."
     },
     {
       id: 4,
       title: "Link School Workshop",
-      description: "Agente de Criação de Conteúdo",
+      description: "Content Creation Agent",
       category: "workshop",
       image: foundersAi,
-      details: "Workshop hands-on ministrado por Denilson Torres sobre desenvolvimento de agentes de IA para criação de conteúdo automatizado, ensinando como transformar processos manuais em sistemas inteligentes que escalam negócios."
+      details: "Hands‑on workshop by Denilson Torres on developing AI agents for automated content creation, teaching how to transform manual processes into intelligent systems that scale businesses."
     },
     {
       id: 5,
-      title: "Passagem por Grandes Startups",
-      description: "Automação e Growth",
+      title: "Experience in Major Startups",
+      description: "Automation and Growth",
       category: "work",
       image: startupIdwall,
-      details: "Experiência prática de Denilson Torres no desenvolvimento de soluções avançadas de automação e growth em grandes startups durante +6 anos, aplicando IA para otimizar processos e acelerar o crescimento de empresas brasileiras."
+      details: "Practical experience of Denilson Torres developing advanced automation and growth solutions in major startups for 6+ years, applying AI to optimize processes and accelerate business growth in Brazil."
     },
     {
       id: 6,
-      title: "Vale do Silício",
-      description: "Preparação MBA IA",
+      title: "Silicon Valley",
+      description: "Preparation for AI MBA",
       category: "international",
       image: siliconValley,
-      details: "Preparação internacional de Denilson Torres para MBA em Inteligência Artificial no Vale do Silício, absorvendo as melhores práticas do epicentro mundial da tecnologia para aplicar no mercado brasileiro."
+      details: "International preparation of Denilson Torres for an MBA in Artificial Intelligence in Silicon Valley, absorbing best practices from the world's technology epicenter to apply in the Brazilian market."
     }
   ];
 
   const filters = [
-    { key: "all", label: "Todos" },
-    { key: "education", label: "Educação" },
-    { key: "speaking", label: "Palestras" },
-    { key: "work", label: "Projetos" },
-    { key: "competition", label: "Competições" },
+    { key: "all", label: "All" },
+    { key: "education", label: "Education" },
+    { key: "speaking", label: "Talks" },
+    { key: "work", label: "Projects" },
+    { key: "competition", label: "Competitions" },
     { key: "workshop", label: "Workshops" },
-    { key: "international", label: "Internacional" }
+    { key: "international", label: "International" }
   ];
 
   const filteredItems = activeFilter === "all" 
@@ -112,7 +112,7 @@ const GallerySection = () => {
             Denilson Torres
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            7 anos transformando negócios com IA e automação, compartilhando conhecimento em agentes de IA que geram receita real
+            7+ years transforming businesses with AI and automation, sharing knowledge on AI agents that generate real revenue
           </p>
         </div>
 

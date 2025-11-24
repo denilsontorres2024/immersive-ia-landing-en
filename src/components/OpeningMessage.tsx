@@ -57,11 +57,11 @@ const OpeningMessage = () => {
           <ResponsiveCard variant="elevated" className="bg-card/90 border-primary/20 backdrop-enhanced mb-12 sm:mb-0">
             <blockquote>
               <ResponsiveText size="lg" className="text-foreground leading-relaxed">
-                "Capacitar parlamentares e equipes de órgãos públicos brasileiros no{" "}
-                <span className="gradient-text font-semibold">uso prático do ChatGPT</span> para 
-                atividades legislativas do dia a dia. São{" "}
-                <span className="gradient-text font-semibold">50 capacitações presenciais</span>{" "}
-                em Brasília ao longo de 12 meses, com foco em aplicações reais do contexto legislativo."
+                "Train parliamentarians and teams from Brazilian public agencies in the{" "}
+                <span className="gradient-text font-semibold">practical use of ChatGPT</span> for
+                everyday legislative activities. There are{" "}
+                <span className="gradient-text font-semibold">50 in‑person trainings</span>{" "}
+                in Brasília over 12 months, focused on real applications in the legislative context."
               </ResponsiveText>
             </blockquote>
           </ResponsiveCard>
@@ -73,7 +73,7 @@ const OpeningMessage = () => {
         <button
           onClick={scrollToNext}
           className="flex flex-col items-center gap-1 text-foreground hover:text-primary transition-colors group touch-target focus-visible:focus"
-          aria-label="Ver entregas e valores"
+          aria-label="View deliveries and pricing"
         >
           <ChevronDown className="w-5 h-5 animate-bounce group-hover:animate-none text-primary" />
         </button>

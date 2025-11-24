@@ -8,7 +8,7 @@ const AcademiaSection = () => {
   const [isTyping, setIsTyping] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const fullMessage = "Olá! Sou a Alana Lendária da Academia Lendár[IA]™. Como posso ajudar você a descobrir o futuro da educação em IA?";
+  const fullMessage = "Hello! I am Alana from Lendár[IA]™ Academy. How can I help you explore the future of AI education?";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -83,7 +83,7 @@ const AcademiaSection = () => {
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-black gradient-text mb-6">
-                ACADEMIA LENDÁR[IA]™
+                LENDÁR[IA]™ ACADEMY
               </h2>
               <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8"></div>
             </div>
@@ -93,11 +93,11 @@ const AcademiaSection = () => {
               <div className="flex items-start gap-4 mb-4">
                 <Brain className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold mb-3 gradient-text">O Futuro da Educação</h3>
+                  <h3 className="text-xl font-bold mb-3 gradient-text">The Future of Education</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Em um futuro onde o trabalho humano está sendo substituído por IA, a{" "}
-                    <span className="gradient-text font-semibold">Academia Lendár[IA]™</span>{" "}
-                    é o ecossistema que prepara pessoas e negócios para prosperarem na Era da Inteligência Artificial.
+                    In a future where human work is increasingly augmented by AI, the{" "}
+                    <span className="gradient-text font-semibold">Lendár[IA]™ Academy</span>{" "}
+                    is the ecosystem that prepares people and businesses to thrive in the Age of Artificial Intelligence.
                   </p>
                 </div>
               </div>
@@ -108,10 +108,10 @@ const AcademiaSection = () => {
               <div className="flex items-start gap-4">
                 <Sparkles className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold mb-3 gradient-text">Minha Contribuição</h3>
+                  <h3 className="text-xl font-bold mb-3 gradient-text">My Contribution</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Como <span className="gradient-text font-semibold">creator e AI Creator</span>, 
-                    desenvolvo conteúdos técnicos dentro deste ecossistema, capacitando pessoas a gerar receita sustentável com agentes inteligentes.
+                    As a <span className="gradient-text font-semibold">creator and AI Creator</span>,
+                    I develop technical content within this ecosystem, enabling people to generate sustainable revenue with intelligent agents.
                   </p>
                 </div>
               </div>
@@ -121,7 +121,7 @@ const AcademiaSection = () => {
             <div className="space-y-4 mb-8">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
                 <Bot className="w-6 h-6 text-primary" />
-                Nossa IA pode:
+                Our AI can:
               </h3>
               {features.map((feature, index) => (
                 <div
@@ -191,7 +191,7 @@ const AcademiaSection = () => {
                             <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                             <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                           </div>
-                          <span>IA está digitando...</span>
+                          <span>AI is typing...</span>
                         </div>
                       )}
                     </div>
@@ -201,7 +201,7 @@ const AcademiaSection = () => {
                       <div className="flex items-center gap-3 bg-muted/30 rounded-full px-4 py-3">
                         <input 
                           type="text" 
-                          placeholder="Digite sua mensagem..."
+                          placeholder="Type your message..."
                           className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
                         />
                         <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
@@ -227,12 +227,12 @@ const AcademiaSection = () => {
         {/* CTA Section */}
         <div className={`text-center mt-20 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-3xl font-bold gradient-text mb-6">
-              Converse com Nossa IA Agora
-            </h3>
-            <p className="text-xl text-muted-foreground mb-8">
-              Descubra como a Academia Lendár[IA]™ pode transformar sua carreira na era da IA
-            </p>
+              <h3 className="text-3xl font-bold gradient-text mb-6">
+                Chat with Our AI Now
+              </h3>
+              <p className="text-xl text-muted-foreground mb-8">
+                Discover how Lendár[IA]™ Academy can transform your career in the AI era
+              </p>
             
             <Button 
               className="btn-glow text-lg px-12 py-4 group relative overflow-hidden"
@@ -240,7 +240,7 @@ const AcademiaSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <MessageCircle className="w-6 h-6 mr-3" />
-              <span>Conversar com nossa IA</span>
+              <span>Chat with our AI</span>
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/30 rounded-full transition-all duration-300"></div>
             </Button>
           </div>

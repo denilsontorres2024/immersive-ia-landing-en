@@ -87,7 +87,7 @@ const FinalCTASection = () => {
     window.open('https://www.youtube.com/@deniaitorres?sub_confirmation=1', '_blank');
   };
 
-  const words = ["ACOMPANHE", "MINHA", "JORNADA"];
+  const words = ["FOLLOW", "MY", "JOURNEY"];
 
   return (
     <section ref={sectionRef} className="py-32 pb-40 bg-background relative overflow-hidden">
@@ -125,7 +125,7 @@ const FinalCTASection = () => {
           <p className={`text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed transition-all duration-1000 delay-800 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            Todos os dias úteis às 19h, mostro na prática como pessoas comuns podem gerar mais receita com agentes de IA.
+            Every weekday at 7 PM, I demonstrate how everyday people can generate more revenue with AI agents.
           </p>
         </div>
 
@@ -137,15 +137,15 @@ const FinalCTASection = () => {
               <div className="flex items-center justify-center gap-3 md:gap-4 mb-6">
                 <Clock className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl font-bold">SEG - SEX</div>
-                  <div className="text-2xl md:text-3xl font-black gradient-text">19:00h</div>
+                  <div className="text-lg md:text-2xl font-bold">MON - FRI</div>
+                  <div className="text-2xl md:text-3xl font-black gradient-text">7:00 PM</div>
                 </div>
                 <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full animate-pulse shadow-glow"></div>
               </div>
               
               {/* Countdown */}
               <div className="mb-4">
-                <p className="text-xs md:text-sm text-muted-foreground mb-2">Próxima live em:</p>
+                <p className="text-xs md:text-sm text-muted-foreground mb-2">Next live in:</p>
                 <div className="flex justify-center gap-1 md:gap-2 text-lg md:text-2xl font-bold">
                   <span className="bg-primary/20 px-2 md:px-3 py-1 rounded-lg text-sm md:text-base">{timeToLive.hours.toString().padStart(2, '0')}</span>
                   <span className="text-sm md:text-base">:</span>
@@ -184,14 +184,14 @@ const FinalCTASection = () => {
             </div>
             
             {/* Content */}
-            <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-              <Youtube className="w-6 h-6 md:w-7 md:h-7" />
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                <span className="font-bold text-xs sm:text-sm md:text-base">Assista às Lives no YouTube</span>
-                <span className="text-xs opacity-90">🔴 Ao vivo • Seg-Sex às 19h</span>
+              <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                <Youtube className="w-6 h-6 md:w-7 md:h-7" />
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                <span className="font-bold text-xs sm:text-sm md:text-base">Watch Lives on YouTube</span>
+                <span className="text-xs opacity-90">🔴 Live • Mon–Fri at 7 PM</span>
+                </div>
+                <Play className="w-4 h-4 md:w-5 md:h-5 animate-pulse hidden sm:block" />
               </div>
-              <Play className="w-4 h-4 md:w-5 md:h-5 animate-pulse hidden sm:block" />
-            </div>
             
             {/* Glow Border */}
             <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-full transition-all duration-300"></div>
@@ -203,11 +203,11 @@ const FinalCTASection = () => {
         <div className={`text-center mt-20 transition-all duration-1000 delay-1200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
-              🚀 Não perca a oportunidade de estar na vanguarda da revolução da IA
+              🚀 Don’t miss the opportunity to be at the forefront of the AI revolution
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Cada live é uma nova descoberta, uma nova estratégia, uma nova forma de gerar receita com inteligência artificial. 
-              Junte-se a milhares de pessoas que já estão transformando seus negócios com IA.
+              Each live session is a new discovery, a new strategy, a new way to generate revenue with artificial intelligence.
+              Join thousands of people already transforming their businesses with AI.
             </p>
           </div>
         </div>
@@ -221,7 +221,7 @@ const FinalCTASection = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 text-sm underline-offset-4 hover:underline px-4"
           >
             <Instagram className="w-4 h-4" />
-            <span>Volte para o Instagram</span>
+            <span>Go to Instagram</span>
           </a>
         </div>
       </div>

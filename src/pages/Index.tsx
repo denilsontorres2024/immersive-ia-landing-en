@@ -27,25 +27,25 @@ const Index = () => {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "EducationalEvent",
-      "name": "50 Capacitações OpenAI para Órgãos Públicos",
-      "description": "Capacitações presenciais em ChatGPT para atividades legislativas do dia a dia",
+      "name": "50 OpenAI Trainings for Public Agencies",
+      "description": "In‑person ChatGPT trainings for everyday legislative activities",
       "startDate": "2025-01-01",
       "endDate": "2025-12-31",
       "location": {
         "@type": "Place",
         "name": "Brasília - DF",
-        "address": "Brasília, Distrito Federal, Brasil"
+        "address": "Brasília, Federal District, Brazil"
       },
       "organizer": {
         "@type": "Person",
         "name": "Denilson Torres",
-        "jobTitle": "Professor em IA Generativa"
+        "jobTitle": "Instructor in Generative AI"
       },
       "offers": {
         "@type": "Offer",
         "price": "375000",
         "priceCurrency": "BRL",
-        "description": "Pacote completo de 50 capacitações presenciais"
+        "description": "Full package of 50 in‑person trainings"
       }
     };
     const script = document.createElement('script');
@@ -98,10 +98,10 @@ const Index = () => {
       </main>
 
       {/* Loading Screen - Performance Optimized */}
-      <div id="loading-screen" className="fixed inset-0 bg-background z-50 flex items-center justify-center" role="status" aria-label="Carregando conteúdo">
+      <div id="loading-screen" className="fixed inset-0 bg-background z-50 flex items-center justify-center" role="status" aria-label="Loading content">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-primary/20 border-t-primary rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-primary text-xl font-bold animate-pulse">Carregando proposta OPEN AI</p>
+          <p className="text-primary text-xl font-bold animate-pulse">Loading OPEN AI proposal</p>
           
         </div>
       </div>

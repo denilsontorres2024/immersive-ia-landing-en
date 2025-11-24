@@ -72,7 +72,7 @@ const ProposalCover = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12 text-muted-foreground">
             <div className="flex items-center gap-2 touch-target">
               <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              <ResponsiveText size="sm" className="text-muted-foreground">Órgãos Públicos</ResponsiveText>
+              <ResponsiveText size="sm" className="text-muted-foreground">Public Agencies</ResponsiveText>
             </div>
             <div className="w-1 h-1 bg-primary rounded-full hidden sm:block" aria-hidden="true"></div>
             <div className="flex items-center gap-2 touch-target">
@@ -94,17 +94,17 @@ const ProposalCover = () => {
           <div className="text-center lg:text-left space-y-6 lg:space-y-8">
             <div className={`transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <ResponsiveText as="h1" size="5xl" weight="black" className="leading-tight mb-4 sm:mb-6 text-white">
-                50 CAPACITAÇÕES{" "}
+                50 TRAININGS{" "}
                 <br className="hidden sm:block" />
                 <span className="text-white text-center">OPEN AI</span>
               </ResponsiveText>
               
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 <ResponsiveText as="h2" size="3xl" weight="bold" className="text-foreground">
-                  PARA ÓRGÃOS PÚBLICOS
+                  FOR PUBLIC AGENCIES
                 </ResponsiveText>
                 <ResponsiveText as="h3" size="xl" weight="medium" className="text-primary/90">
-                  ChatGPT em Atividades Legislativas
+                  ChatGPT in Legislative Activities
                 </ResponsiveText>
               </div>
 
@@ -114,11 +114,11 @@ const ProposalCover = () => {
             {/* Enhanced CTA Section */}
         <div className={`transition-all duration-800 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
-                <button onClick={scrollToNext} className="btn-cta hover:scale-105 focus-visible:focus text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4" aria-label="Ver proposta completa de 50 capacitações OpenAI">
-                  Ver Proposta
+                <button onClick={scrollToNext} className="btn-cta hover:scale-105 focus-visible:focus text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4" aria-label="View full proposal of 50 OpenAI trainings">
+                  View Proposal
                 </button>
-                <button onClick={scrollToProfile} className="btn-secondary hover:scale-105 focus-visible:focus text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4" aria-label="Conhecer o perfil de Denilson Torres">
-                  Quem é Denilson Torres
+                <button onClick={scrollToProfile} className="btn-secondary hover:scale-105 focus-visible:focus text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4" aria-label="View Denilson Torres' profile">
+                  Who is Denilson Torres
                 </button>
               </div>
             </div>
@@ -133,12 +133,12 @@ const ProposalCover = () => {
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   <ResponsiveText size="xl" weight="bold" className="text-primary">
-                    +{animatedCount.toLocaleString('pt-BR')}
+                    +{animatedCount.toLocaleString('en-US')}
                   </ResponsiveText>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                  <ResponsiveText size="sm" weight="medium">Professor IA</ResponsiveText>
+                  <ResponsiveText size="sm" weight="medium">AI Instructor</ResponsiveText>
                 </div>
               </div>
               
@@ -147,24 +147,24 @@ const ProposalCover = () => {
                   DENILSON TORRES
                 </ResponsiveText>
                 <ResponsiveText size="base" className="text-muted-foreground">
-                  Professor em IA Generativa • Proposta OPEN AI        
+                  Instructor in Generative AI • OPEN AI Proposal
                 </ResponsiveText>
                 
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-1 gap-3">
                   <div className="bg-primary/10 border border-primary/30 px-4 py-3 rounded-lg">
                     <ResponsiveText size="sm" weight="medium" className="text-primary">
-                      +12K Alunos Capacitados
+                      12k+ Students Trained
                     </ResponsiveText>
                   </div>
                   <div className="bg-primary/10 border border-primary/30 px-4 py-3 rounded-lg">
                     <ResponsiveText size="sm" weight="medium" className="text-primary">
-                      Professor MBA IA • Professor SEBRAE • ex-TJSP
+                      AI MBA Instructor • SEBRAE Instructor • former TJSP
                     </ResponsiveText>
                   </div>
                   <div className="bg-primary/10 border border-primary/30 px-4 py-3 rounded-lg">
                     <ResponsiveText size="sm" weight="medium" className="text-primary">
-                      +20 Prêmios Tech • MBA AI Vale do Silício
+                      20+ Tech Awards • AI MBA Silicon Valley
                     </ResponsiveText>
                   </div>
                 </div>
@@ -176,8 +176,8 @@ const ProposalCover = () => {
 
       {/* Enhanced Navigation Button */}
       <div className="relative z-20 pb-8">
-        <button onClick={scrollToNext} className="flex flex-col items-center gap-2 text-foreground hover:text-primary transition-colors group touch-target focus-visible:focus" aria-label="Ver Proposta">
-          <ResponsiveText size="sm" weight="medium">Ver Proposta</ResponsiveText>
+        <button onClick={scrollToNext} className="flex flex-col items-center gap-2 text-foreground hover:text-primary transition-colors group touch-target focus-visible:focus" aria-label="View Proposal">
+          <ResponsiveText size="sm" weight="medium">View Proposal</ResponsiveText>
           <ChevronDown className="w-6 h-6 animate-bounce group-hover:animate-none text-primary" />
         </button>
       </div>

@@ -10,59 +10,59 @@ import startupIdwall from "@/assets/startup-idwall.jpg";
 import siliconValley from "@/assets/silicon-valley.jpg";
 const ProfileSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeFilter, setActiveFilter] = useState("Todos");
+  const [activeFilter, setActiveFilter] = useState("All");
   const sectionRef = useRef<HTMLDivElement>(null);
-  const filters = ["Todos", "Educação", "Palestras", "Projetos", "Competições", "Workshops", "Internacional"];
+  const filters = ["All", "Education", "Talks", "Projects", "Competitions", "Workshops", "International"];
   const achievements = [{
     id: 2,
-    category: "Competições",
-    title: "Ganhador de competições de tecnologia",
-    subtitle: "Vencedor em Diversas Competições de Tecnologia",
-    description: "Denilson Torres conquistou múltiplos prêmios em competições nacionais e internacionais de tecnologia, demonstrando sua expertise em soluções inovadoras e consolidando sua posição como referência no setor tech.",
+    category: "Competitions",
+    title: "Winner of technology competitions",
+    subtitle: "Winner in multiple technology competitions",
+    description: "Denilson Torres earned multiple awards in national and international technology competitions, demonstrating expertise in innovative solutions and consolidating his position as a reference in the tech sector.",
     image: deniTrophy,
     icon: Trophy
   }, {
     id: 3,
-    category: "Educação",
-    title: "Formatura FIAP",
-    subtitle: "Bolsista Integral",
-    description: "Formação completa de Denilson Torres como bolsista integral na FIAP, construindo uma base sólida em tecnologia e inovação.",
+    category: "Education",
+    title: "FIAP Graduation",
+    subtitle: "Full Scholarship",
+    description: "Complete education of Denilson Torres as a full scholarship student at FIAP, building a solid foundation in technology and innovation.",
     image: graduationFiap,
     icon: BookOpen
   }, {
     id: 4,
-    category: "Palestras",
+    category: "Talks",
     title: "Academia Lendár[IA]™",
-    subtitle: "Palestra sobre IA para Receita",
-    description: "Apresentação de Denilson Torres na Academia Lendária sobre como gerar receita real com IA, compartilhando estratégias práticas e comprovadas.",
+    subtitle: "Talk on Revenue with AI",
+    description: "Presentation by Denilson Torres at the Lendár[IA] Academy on generating real revenue with AI, sharing practical and proven strategies.",
     image: academiaEvent,
     icon: Users
   }, {
     id: 5,
     category: "Workshops",
     title: "Founders AI Workshop",
-    subtitle: "Agente de Criação de Conteúdo",
-    description: "Workshop prático ministrado por Denilson Torres sobre desenvolvimento de agentes de IA para criação de conteúdo automatizado e escalável.",
+    subtitle: "Content Creation Agent",
+    description: "Hands‑on workshop by Denilson Torres on developing AI agents for automated, scalable content creation.",
     image: foundersAi,
     icon: Code
   }, {
     id: 6,
-    category: "Projetos",
-    title: "Passagem por Grandes Startups",
-    subtitle: "Automação e Growth",
-    description: "Desenvolvimento por Denilson Torres de soluções avançadas de automação e growth em grandes startups durante +6 anos, transformando processos, otimizando operações e acelerando resultados exponenciais através de tecnologia e estratégias data-driven.",
+    category: "Projects",
+    title: "Experience in Major Startups",
+    subtitle: "Automation and Growth",
+    description: "Development by Denilson Torres of advanced automation and growth solutions in major startups for 6+ years, transforming processes, optimizing operations, and accelerating exponential results through technology and data‑driven strategies.",
     image: startupIdwall,
     icon: Code
   }, {
     id: 7,
-    category: "Internacional",
-    title: "Vale do Silício",
-    subtitle: "Preparação MBA IA",
-    description: "Preparação de Denilson Torres para MBA em Inteligência Artificial no Vale do Silício, absorvendo as melhores práticas do epicentro mundial da tecnologia.",
+    category: "International",
+    title: "Silicon Valley",
+    subtitle: "Preparation for AI MBA",
+    description: "Preparation of Denilson Torres for an MBA in Artificial Intelligence in Silicon Valley, absorbing best practices from the world's technology epicenter.",
     image: siliconValley,
     icon: Globe
   }];
-  const filteredAchievements = activeFilter === "Todos" ? achievements : achievements.filter(achievement => achievement.category === activeFilter);
+  const filteredAchievements = activeFilter === "All" ? achievements : achievements.filter(achievement => achievement.category === activeFilter);
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !isVisible) {
@@ -76,7 +76,7 @@ const ProfileSection = () => {
     }
     return () => observer.disconnect();
   }, [isVisible]);
-  return <section ref={sectionRef} className="py-16 lg:py-24 bg-muted/30">
+  return <section id="about" ref={sectionRef} className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto">
         {/* Header */}
         <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -85,7 +85,7 @@ const ProfileSection = () => {
           </h2>
           <div className="w-16 sm:w-20 h-0.5 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            +6 anos em startups de crescimento transformando negócios com IA e automação, compartilhando conhecimento através de lives diárias e formando +12k alunos na área
+            6+ years in high‑growth startups transforming businesses with AI and automation, sharing knowledge through daily live sessions and training 12k+ students in the field
           </p>
         </div>
 

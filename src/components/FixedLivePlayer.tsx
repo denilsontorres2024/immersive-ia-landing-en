@@ -64,8 +64,8 @@ const FixedLivePlayer = () => {
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-3">
                 <Youtube className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-bold text-sm mb-1">Live às 19h</h3>
-              <p className="text-xs text-muted-foreground">Agentes de IA que geram receita</p>
+              <h3 className="font-bold text-sm mb-1">Live at 7 PM</h3>
+              <p className="text-xs text-muted-foreground">AI agents that generate revenue</p>
             </div>
             
             <div className="space-y-2">
@@ -74,13 +74,13 @@ const FixedLivePlayer = () => {
                 className="w-full bg-red-600 hover:bg-red-700 text-white text-xs py-2"
               >
                 <Play className="w-3 h-3 mr-2" />
-                Assistir no YouTube
-              </Button>
+                Watch on YouTube
+                </Button>
               
               <div className="text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-1">
                   <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                  Ao vivo agora
+                  Live now
                 </span>
               </div>
             </div>

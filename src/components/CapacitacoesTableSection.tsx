@@ -31,24 +31,77 @@ const CapacitacoesTableSection = () => {
       });
     }
   };
-  const fundamentos = ["Introdução ao ChatGPT: Primeiros Passos no Contexto Legislativo", "Prompting Eficaz: Como Fazer as Perguntas Certas", "Análise Rápida de Projetos de Lei com IA", "Síntese de Documentos Extensos em Minutos", "Pesquisa Legislativa Acelerada com ChatGPT", "Fact-Checking: Verificação de Informações com IA", "Elaboração de Pareceres Técnicos Assistida por IA", "Comunicação Parlamentar: Discursos e Notas com ChatGPT", "Gestão de Tempo: IA como Assistente Executivo", "Organização de Agenda e Prioridades com IA", "Preparação para Debates e Audiências Públicas", "Análise de Impacto de Proposições Legislativas", "Monitoramento de Temas de Interesse com IA", "Elaboração de Emendas e Substitutivos", "Comunicação com Eleitores: Respostas Rápidas e Personalizadas", "Análise de Dados Orçamentários Simplificada", "Resumos Executivos de Sessões Plenárias", "Tradução e Análise de Legislação Internacional", "Gestão de Crises de Comunicação com IA", "Ética e Limites no Uso de IA no Poder Legislativo"];
-  const avancadas = ["Deep Search: Pesquisa Aprofundada em Bases Legislativas", "Análise Comparativa de Legislações Estaduais/Federais", "Identificação de Precedentes e Jurisprudência Relevante", "GPTs Customizados para Gabinetes Parlamentares", "Automatização de Relatórios Periódicos", "Análise de Impacto Regulatório com IA", "Mapeamento de Stakeholders e Atores Relevantes", "Elaboração de Estudos Técnicos e White Papers", "Análise de Viabilidade de Proposições", "Monitoramento de Tramitação Legislativa Automatizado", "Análise Semântica de Proposições Similares", "Preparação de Briefings para Comissões", "Análise de Emendas Orçamentárias em Escala", "Gestão de Conhecimento: Biblioteca Digital Inteligente", "Análise de Sentimento em Consultas Públicas", "Elaboração de Proposições Legislativas Assistida por IA", "Revisão e Aperfeiçoamento de Textos Normativos", "Análise de Constitucionalidade Preliminar", "Mapeamento de Lacunas Legislativas", "Benchmarking Internacional de Políticas Públicas"];
-  const governanca = ["Governança de IA em Órgãos Públicos", "Segurança da Informação e Proteção de Dados com IA", "Implementação de IA: Da Piloto à Escala Institucional", "ROI de IA no Poder Legislativo: Métricas e KPIs", "Gestão de Mudança: Adoção de IA por Equipes", "Compliance e LGPD no Uso de IA Generativa", "Estratégias de Comunicação Institucional com IA", "IA e Transparência: Prestação de Contas ao Cidadão", "Planejamento Estratégico com Inteligência Artificial", "Futuro da IA no Legislativo: Tendências 2025-2030"];
+  const fundamentos = [
+    "Introduction to ChatGPT: First Steps in the Legislative Context",
+    "Effective Prompting: How to Ask the Right Questions",
+    "Rapid Analysis of Bills with AI",
+    "Summarizing Long Documents in Minutes",
+    "Accelerated Legislative Research with ChatGPT",
+    "Fact-Checking: Verifying Information with AI",
+    "Drafting Technical Opinions Assisted by AI",
+    "Parliamentary Communication: Speeches and Notes with ChatGPT",
+    "Time Management: AI as an Executive Assistant",
+    "Scheduling and Prioritization with AI",
+    "Preparation for Debates and Public Hearings",
+    "Impact Analysis of Legislative Proposals",
+    "Monitoring Topics of Interest with AI",
+    "Drafting Amendments and Substitutes",
+    "Communication with Voters: Fast and Personalized Responses",
+    "Simplified Budget Data Analysis",
+    "Executive Summaries of Plenary Sessions",
+    "Translation and Analysis of International Legislation",
+    "Communication Crisis Management with AI",
+    "Ethics and Limits in the Use of AI in the Legislative Branch"
+  ];
+  const avancadas = [
+    "Deep Search: Advanced Research in Legislative Databases",
+    "Comparative Analysis of State/Federal Legislation",
+    "Identification of Relevant Precedents and Case Law",
+    "Custom GPTs for Parliamentary Offices",
+    "Automation of Periodic Reports",
+    "Regulatory Impact Analysis with AI",
+    "Mapping Stakeholders and Relevant Actors",
+    "Development of Technical Studies and White Papers",
+    "Feasibility Analysis of Proposals",
+    "Automated Monitoring of Legislative Proceedings",
+    "Semantic Analysis of Similar Proposals",
+    "Preparation of Briefings for Committees",
+    "Large‑Scale Analysis of Budget Amendments",
+    "Knowledge Management: Intelligent Digital Library",
+    "Sentiment Analysis in Public Consultations",
+    "Drafting Legislative Proposals Assisted by AI",
+    "Review and Improvement of Normative Texts",
+    "Preliminary Constitutionality Analysis",
+    "Mapping Legislative Gaps",
+    "International Benchmarking of Public Policies"
+  ];
+  const governanca = [
+    "AI Governance in Public Agencies",
+    "Information Security and Data Protection with AI",
+    "AI Implementation: From Pilot to Institutional Scale",
+    "AI ROI in the Legislative Branch: Metrics and KPIs",
+    "Change Management: AI Adoption by Teams",
+    "Compliance and LGPD in the Use of Generative AI",
+    "Institutional Communication Strategies with AI",
+    "AI and Transparency: Accountability to Citizens",
+    "Strategic Planning with Artificial Intelligence",
+    "The Future of AI in the Legislature: Trends 2025–2030"
+  ];
   const tabs = [{
     id: "fundamentos" as const,
-    label: "Fundamentos",
+    label: "Foundations",
     icon: BookOpen,
     count: 20,
     data: fundamentos
   }, {
     id: "avancadas" as const,
-    label: "Aplicações Avançadas",
+    label: "Advanced Applications",
     icon: Brain,
     count: 20,
     data: avancadas
   }, {
     id: "governanca" as const,
-    label: "Governança",
+    label: "Governance",
     icon: Target,
     count: 10,
     data: governanca
@@ -60,11 +113,11 @@ const CapacitacoesTableSection = () => {
         {/* Section Header */}
         <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 id="capacitacoes-title" className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6">
-            TODAS AS CAPACITAÇÕES
+            ALL TRAININGS
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
           <ResponsiveText className="text-muted-foreground max-w-3xl mx-auto" size="lg">
-            Temas detalhados das 50 capacitações organizadas por trilha de aprendizado
+            Detailed topics of the 50 trainings organized by learning track
           </ResponsiveText>
         </div>
 
@@ -75,10 +128,10 @@ const CapacitacoesTableSection = () => {
           return <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 p-4 rounded-lg transition-all duration-300 ${activeTab === tab.id ? 'bg-primary text-primary-foreground shadow-lg scale-105' : 'bg-card hover:bg-card/80 text-foreground'}`}>
                 <div className="flex items-center justify-center gap-3">
                   <Icon className="w-5 h-5" />
-                  <div className="text-left">
-                    <div className="font-bold text-sm sm:text-base">{tab.label}</div>
-                    <div className="text-xs opacity-80">{tab.count} capacitações</div>
-                  </div>
+                    <div className="text-left">
+                      <div className="font-bold text-sm sm:text-base">{tab.label}</div>
+                      <div className="text-xs opacity-80">{tab.count} trainings</div>
+                    </div>
                 </div>
               </button>;
         })}
@@ -93,10 +146,10 @@ const CapacitacoesTableSection = () => {
                 </div>
                 <div>
                   <ResponsiveText size="xl" weight="bold" className="text-foreground">
-                    TRILHA: {activeTabData.label.toUpperCase()}
+                    TRACK: {activeTabData.label.toUpperCase()}
                   </ResponsiveText>
                   <ResponsiveText size="sm" className="text-muted-foreground">
-                    {activeTabData.count} capacitações práticas de 2 horas
+                    {activeTabData.count} practical 2‑hour trainings
                   </ResponsiveText>
                 </div>
               </>}
@@ -116,7 +169,7 @@ const CapacitacoesTableSection = () => {
           {/* Note */}
           <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
             <ResponsiveText size="sm" className="text-muted-foreground text-center">
-              Os temas são sugestões iniciais e poderão variar conforme necessidades específicas dos órgãos públicos atendidos
+              Topics are initial suggestions and may vary according to the specific needs of the served public agencies
             </ResponsiveText>
           </div>
         </ResponsiveCard>
@@ -125,7 +178,7 @@ const CapacitacoesTableSection = () => {
 
       {/* Navigation Button */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:hidden">
-        <button onClick={scrollToNext} className="flex flex-col items-center gap-1 text-foreground hover:text-primary transition-colors group touch-target focus-visible:focus" aria-label="Ver corpo docente">
+        <button onClick={scrollToNext} className="flex flex-col items-center gap-1 text-foreground hover:text-primary transition-colors group touch-target focus-visible:focus" aria-label="View team">
           <ChevronDown className="w-5 h-5 animate-bounce group-hover:animate-none text-primary" />
         </button>
       </div>

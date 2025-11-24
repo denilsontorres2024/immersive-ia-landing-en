@@ -71,8 +71,8 @@ const HeroSection = () => {
         {/* Animated Subtitle */}
         <div className={`transition-all duration-1000 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-8 text-shadow">
-            Desenvolvo <span className="gradient-text animate-glow-pulse">Agentes de IA</span>{" "}
-            que <span className="gradient-text animate-glow-pulse">geram receita</span>
+            I build <span className="gradient-text animate-glow-pulse">AI Agents</span>{" "}
+            that <span className="gradient-text animate-glow-pulse">generate revenue</span>
           </h2>
 
           {/* Info Cards */}
@@ -80,11 +80,11 @@ const HeroSection = () => {
             <div className="card-interactive hover:scale-105 transition-transform duration-300">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                <span className="text-sm md:text-base">Lives gratuitas todos os dias úteis às 19h</span>
+                <span className="text-sm md:text-base">Free live sessions every weekday at 7 PM</span>
               </div>
             </div>
             <div className="card-interactive hover:scale-105 transition-transform duration-300">
-              <span className="text-sm md:text-base">Para quem quer gerar mais receita com IA</span>
+              <span className="text-sm md:text-base">For those who want to drive more revenue with AI</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ const HeroSection = () => {
               }}
             >
               <Youtube className="w-6 h-6 mr-2" />
-              <span>Assistir Live no YouTube</span>
+              <span>Watch Live on YouTube</span>
               <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </Button>
             
@@ -108,7 +108,7 @@ const HeroSection = () => {
               onClick={() => window.open('https://www.linkedin.com/in/denilson-torres-2002/', '_blank')}
             >
               <Linkedin className="w-6 h-6 mr-2" />
-              <span>Ver Perfil no LinkedIn</span>
+              <span>View LinkedIn Profile</span>
             </Button>
           </div>
 
@@ -117,7 +117,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-center gap-3">
               <Play className="w-5 h-5 text-red-500 animate-pulse" />
               <span className="text-red-400 font-semibold">
-                Próxima live hoje às 19h - Agentes de IA para E-commerce
+                Next live today at 7 PM — AI Agents for E‑commerce
               </span>
             </div>
           </div>
@@ -125,7 +125,7 @@ const HeroSection = () => {
           {/* Scroll Indicator */}
           <div className="animate-float">
             <div className="flex flex-col items-center gap-2 text-muted-foreground">
-              <span className="text-sm">Role para conhecer mais sobre o Deni</span>
+              <span className="text-sm">Scroll to learn more about Deni</span>
               <ChevronDown className="w-6 h-6 animate-bounce" />
             </div>
           </div>

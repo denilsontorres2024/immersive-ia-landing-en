@@ -22,18 +22,13 @@ const ContactSection = () => {
     value: "(11) 95814-9007",
     link: "http://wa.me/+11958149007"
   }, {
-    icon: Instagram,
-    label: "Instagram",
-    value: "@deniaitorres",
-    link: "https://instagram.com/deniaitorres"
-  }, {
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/deniaitorres",
     link: "https://linkedin.com/in/deniaitorres"
   }, {
     icon: Mail,
-    label: "E-mail",
+    label: "Email",
     value: "denidetorres@gmail.com",
     link: "mailto:denidetorres@gmail.com"
   }];
@@ -41,11 +36,11 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-4">
-            CONTATO
+            CONTACT
           </h2>
           <div className="w-16 sm:w-20 h-0.5 bg-primary mx-auto mb-6"></div>
           <p className="text-sm sm:text-base text-muted-foreground max-w-lg mx-auto">
-            Entre em contato para tirar dúvidas ou formalizar a parceria
+            Get in touch to clarify questions or formalize a partnership
           </p>
         </div>
 
@@ -57,8 +52,8 @@ const ContactSection = () => {
             {/* Professional Card */}
             <div className="card-responsive text-center mb-6">
               <h3 className="text-xl font-bold text-foreground mb-2">DENILSON TORRES</h3>
-              <p className="text-muted-foreground text-sm mb-2">Professor em IA Generativa      </p>
-              <p className="text-xs text-muted-foreground">Capacitações Presenciais em Brasília</p>
+              <p className="text-muted-foreground text-base font-medium mb-2">Instructor in Generative AI</p>
+              <p className="text-sm text-muted-foreground">In‑person trainings in Brasília</p>
             </div>
 
             {/* Contact Methods */}
@@ -85,28 +80,28 @@ const ContactSection = () => {
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="card-responsive text-center">
               <h3 className="text-xl font-bold text-foreground mb-4">
-                Vamos conversar?
+                Shall we talk?
               </h3>
               
               <p className="text-sm text-muted-foreground mb-6">
-                Disponível para esclarecer dúvidas sobre esta proposta e discutir como maximizar o valor da proposta.
+                Available to clarify questions about this proposal and discuss how to maximize value.
               </p>
 
               <div className="space-y-3">
-                <button className="w-full btn-primary flex items-center justify-center gap-2" onClick={() => window.open('http://wa.me/+11958149007?text=Olá! Tenho interesse na proposta para o evento Órbita 2025.', '_blank')}>
+                <button className="w-full btn-primary flex items-center justify-center gap-2" onClick={() => window.open('http://wa.me/+11958149007?text=Hello! I am interested in the proposal for the Órbita 2025 event.', '_blank')}>
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp
                 </button>
                 
-                <button className="w-full btn-secondary flex items-center justify-center gap-2" onClick={() => window.open('mailto:denidetorres@gmail.com?subject=Proposta OPEN AI', '_blank')}>
+                <button className="w-full btn-secondary flex items-center justify-center gap-2" onClick={() => window.open('mailto:denidetorres@gmail.com?subject=OPEN AI Proposal', '_blank')}>
                   <Mail className="w-4 h-4" />
-                  E-mail
+                  Email
                 </button>
               </div>
 
               <div className="mt-4 p-3 bg-muted/50 rounded-lg text-center">
                 <p className="text-xs text-muted-foreground">
-                  <span className="text-foreground font-semibold">Resposta:</span> WhatsApp 2h • E-mail 24h
+                  <span className="text-foreground font-semibold">Response:</span> WhatsApp 2h • Email 24h
                 </p>
               </div>
             </div>
@@ -116,7 +111,7 @@ const ContactSection = () => {
         {/* Footer */}
         <div className={`text-center mt-12 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="card-responsive">
-            <p className="text-xs text-muted-foreground">Proposta elaborada com IA utilizando GPT OSS - Demonstrando na prática como a tecnologia pode otimizar processos governamentais.</p>
+            <p className="text-xs text-muted-foreground">Proposal developed with OpenAI models (e.g., GPT-5) — Demonstrating in practice how the technology can optimize governmental processes.</p>
           </div>
         </div>
       </div>

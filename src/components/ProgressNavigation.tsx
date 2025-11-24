@@ -9,13 +9,13 @@ const ProgressNavigation = () => {
   const [activeSection, setActiveSection] = useState('cover');
 
   const sections = [
-    { id: 'cover', label: 'Proposta', offset: 0 },
-    { id: 'opening', label: 'Abertura', offset: 0 },
-    { id: 'deliveries', label: 'Entregas', offset: 0 },
-    { id: 'investment', label: 'Investimento', offset: 0 },
-    { id: 'about', label: 'Sobre', offset: 0 },
-    { id: 'next-steps', label: 'Próximos Passos', offset: 0 },
-    { id: 'contact', label: 'Contato', offset: 0 }
+    { id: 'cover', label: 'Proposal', offset: 0 },
+    { id: 'opening', label: 'Opening', offset: 0 },
+    { id: 'deliveries', label: 'Deliveries', offset: 0 },
+    { id: 'investment', label: 'Investment', offset: 0 },
+    { id: 'about', label: 'About', offset: 0 },
+    { id: 'next-steps', label: 'Next Steps', offset: 0 },
+    { id: 'contact', label: 'Contact', offset: 0 }
   ];
 
   useEffect(() => {
@@ -79,14 +79,14 @@ const ProgressNavigation = () => {
         aria-valuenow={Math.round(scrollProgress)}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label={`Progresso da leitura: ${Math.round(scrollProgress)}%`}
+        aria-label={`Reading progress: ${Math.round(scrollProgress)}%`}
       />
 
       {/* Sticky Navigation - Desktop */}
       <nav 
         className="fixed top-4 right-4 z-50 hidden lg:block"
         role="navigation"
-        aria-label="Navegação por seções"
+        aria-label="Section navigation"
       >
         <div className="bg-card/90 backdrop-blur-md border border-border rounded-lg p-2 shadow-lg">
           <div className="text-center mb-2">
@@ -118,7 +118,7 @@ const ProgressNavigation = () => {
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="fixed top-4 right-4 z-50 lg:hidden bg-card/90 backdrop-blur-md border border-border rounded-lg p-3 shadow-lg touch-target"
-        aria-label="Abrir menu de navegação"
+        aria-label="Open navigation menu"
         aria-expanded={isMenuOpen}
       >
         {isMenuOpen ? (
@@ -140,7 +140,7 @@ const ProgressNavigation = () => {
           <div className="fixed top-20 right-4 z-50 lg:hidden bg-card backdrop-blur-md border border-border rounded-lg p-4 shadow-lg min-w-[200px]">
             <div className="text-center mb-4">
               <span className="text-sm text-muted-foreground font-medium">
-                Progresso: {Math.round(scrollProgress)}%
+                Progress: {Math.round(scrollProgress)}%
               </span>
             </div>
             
@@ -169,7 +169,7 @@ const ProgressNavigation = () => {
         <button
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-40 bg-primary text-primary-foreground rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 touch-target"
-          aria-label="Voltar ao topo"
+          aria-label="Back to top"
         >
           <ChevronUp className="w-5 h-5" />
         </button>

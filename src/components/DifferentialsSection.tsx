@@ -26,23 +26,23 @@ const DifferentialsSection = () => {
   const differentials = [
     {
       icon: Brain,
-      title: "Experiência Prática em IA",
-      description: "7 anos de automação, agentes inteligentes e Micro-SaaS"
+      title: "Practical Experience in AI",
+      description: "7+ years of automation, intelligent agents, and micro‑SaaS"
     },
     {
       icon: Target,
-      title: "Conteúdo Acessível",
-      description: "Linguagem simples para micro e pequenos empresários"
+      title: "Accessible Content",
+      description: "Clear language for micro and small business owners"
     },
     {
       icon: TrendingUp,
-      title: "Cases Reais de Receita",
-      description: "R$ 5M+ gerados através de soluções de IA"
+      title: "Real Revenue Cases",
+      description: "$930k+ generated through AI solutions"
     },
     {
       icon: Sparkles,
-      title: "Proposta Criada com IA",
-      description: "Demonstração prática da tecnologia em ação"
+      title: "Proposal Created with AI",
+      description: "Practical demonstration of technology in action"
     }
   ];
 
@@ -51,7 +51,7 @@ const DifferentialsSection = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4">
-            DIFERENCIAIS
+            DIFFERENTIALS
           </h2>
           <div className="w-16 h-0.5 bg-primary mx-auto"></div>
         </div>

@@ -31,20 +31,20 @@ const NextStepsSection = () => {
   const steps = [
     {
       icon: CheckCircle,
-      title: "Confirmação do Escopo",
-      description: "Revisão e aprovação das entregas propostas. É necessário definir um cronograma concreto para os 12 meses de 2025.",
+      title: "Scope Confirmation",
+      description: "Review and approval of proposed deliveries. A concrete schedule for the 12 months of 2025 must be defined.",
       number: "01"
     },
     {
       icon: FileText,
-      title: "Documentação",
-      description: "Envio de documentação PJ + CPF para compliance",
+      title: "Documentation",
+      description: "Submit corporate and personal documentation for compliance",
       number: "02"
     },
     {
       icon: PenTool,
-      title: "Assinatura de Contrato",
-      description: "Formalização do acordo com termos e condições",
+      title: "Contract Signing",
+      description: "Formalize the agreement with terms and conditions",
       number: "03"
     }
   ];
@@ -54,7 +54,7 @@ const NextStepsSection = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-4">
-            PRÓXIMOS PASSOS
+            NEXT STEPS
           </h2>
           <div className="w-16 sm:w-20 h-0.5 bg-primary mx-auto"></div>
         </div>
@@ -92,11 +92,11 @@ const NextStepsSection = () => {
 
         <div className={`text-center mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <button 
-            onClick={() => window.open('http://wa.me/+5511958149007?text=Olá! Tenho interesse na proposta de 50 Capacitações OpenAI para Órgãos Públicos.', '_blank')}
+            onClick={() => window.open('http://wa.me/+5511958149007?text=Hello! I am interested in the proposal of 50 OpenAI trainings for public agencies.', '_blank')}
             className="btn-cta"
-            aria-label="Iniciar próximos passos via WhatsApp"
+            aria-label="Start next steps via WhatsApp"
           >
-            Iniciar Próximos Passos
+            Start Next Steps
           </button>
         </div>
       </div>
