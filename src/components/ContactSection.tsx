@@ -24,8 +24,8 @@ const ContactSection = () => {
   }, {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/deniaitorres",
-    link: "https://linkedin.com/in/deniaitorres"
+    value: "linkedin.com/in/denilson-torres-2002",
+    link: "https://www.linkedin.com/in/denilson-torres-2002/"
   }, {
     icon: Mail,
     label: "Email",
